@@ -20,6 +20,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node-modules/,
+        use: "babel-loader",
+      },
+      {
         test: /\.vue$/, // 정규표현식
         use: "vue-loader",
       },
