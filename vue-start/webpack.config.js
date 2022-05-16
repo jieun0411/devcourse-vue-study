@@ -30,7 +30,12 @@ module.exports = {
       },
       {
         test: /\.s?css$/, // 정규표현식
-        use: ["vue-style-loader", "css-loader", "sass-loader"],
+        use: [
+          "vue-style-loader",
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
