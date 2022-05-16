@@ -13,6 +13,7 @@ module.exports = {
   entry: "./src/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
     clean: true,
   },
   // vue 파일을 해석하기 위해 loader 작성
@@ -37,4 +38,7 @@ module.exports = {
       patterns: [{ from: "static" }],
     }),
   ],
+  devServer: {
+    historyApiFallback: true,
+  },
 };
